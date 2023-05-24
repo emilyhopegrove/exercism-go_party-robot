@@ -142,4 +142,4 @@ AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298)
 ### Contributed to by
 
 - @oanaOM
-- @bobtfish
+- @bobtfish# exercism-go_party-robot
