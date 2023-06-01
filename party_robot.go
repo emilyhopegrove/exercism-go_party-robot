@@ -13,20 +13,15 @@ func HappyBirthday(name string, age int) string {
 
 // AssignTable assigns a table to each guest.
 func AssignTable(name string, table int, neighbor, direction string, distance float64) string {
-	// Generate a welcome message for the guest
-	welcomeMessage := Welcome(name)
-
-	// Generate the table assignment message
-	tableAssignment := fmt.Sprintf("You have been assigned to table %03d.", table)
-
-	// Generate the table location message
-	tableLocation := fmt.Sprintf("Your table is %s, exactly %.1f meters from here.", direction, distance)
-	
-	// Generate the neighbor information message
-	neighborInfo := fmt.Sprintf("You will be sitting next to %s.", neighbor)
-
-	// Combine all the messages to create the final output, add space between the middle 2 messages to pass tests
-	return fmt.Sprintf("%s\n%s %s\n%s", welcomeMessage, tableAssignment, tableLocation, neighborInfo)
+	// Combine all the messages to create the final output, ensure there are 3 new lines total
+	return fmt.Sprintf(
+		"%s\nYou have been assigned to table %03d. Your table is %s, exactly %.1f meters from here.\nYou will be sitting next to %s.",
+		Welcome(name),
+		table,
+		direction,
+		distance,
+		neighbor,
+	)
 	
 }
 
