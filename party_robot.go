@@ -1,4 +1,5 @@
 package partyrobot
+
 import "fmt"
 
 // Welcome greets a person by name.
@@ -15,14 +16,10 @@ func HappyBirthday(name string, age int) string {
 func AssignTable(name string, table int, neighbor, direction string, distance float64) string {
 	// Combine all the messages to create the final output, ensure there are 3 new lines total
 	return fmt.Sprintf(
-		"%s\nYou have been assigned to table %03d. Your table is %s, exactly %.1f meters from here.\nYou will be sitting next to %s.",
-		Welcome(name),
-		table,
-		direction,
-		distance,
-		neighbor,
+		"%s\nYou have been assigned to table %03d. "+
+			"Your table is %s, exactly %.1f meters from here.\n"+
+			"You will be sitting next to %s.",
+		Welcome(name), table, direction, distance, neighbor,
 	)
-	
+
 }
-
-
